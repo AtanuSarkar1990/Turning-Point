@@ -1,0 +1,116 @@
+.section {
+  padding: 100px 0;
+}
+
+.bgDark {
+  background-color: #0A0A0A;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.titleLight {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.subtitle {
+  color: var(--secondary-text);
+  font-size: 1.1rem;
+}
+
+.subtitleLight {
+  color: #A0A0A0;
+  font-size: 1.1rem;
+}
+
+/* How It Works Styles */
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.stepCard {
+  text-align: center;
+  position: relative;
+}
+
+.stepNumber {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  color: var(--gold-accent);
+  opacity: 0.15;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: -1.5rem;
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.stepDescription {
+  color: var(--secondary-text);
+  line-height: 1.6;
+}
+
+/* Why Choose Us Styles */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.featureCard {
+  background-color: #1A1A1A;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  border: 1px solid #333333;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  border-color: var(--gold-accent);
+  transform: translateY(-5px);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.featureTitle {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.featureDescription {
+  color: #A0A0A0;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .stepsGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title, .titleLight {
+    font-size: 2.5rem;
+  }
+}
