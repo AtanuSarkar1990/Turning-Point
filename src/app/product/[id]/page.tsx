@@ -74,8 +74,6 @@ export default function ProductPage() {
   };
 
   const mugGallery = [
-    product.image,
-    '/images/mug-designs/mug-1.webp',
     '/images/mug-designs/mug-2.webp',
     '/images/mug-designs/mug-3.webp',
     '/images/mug-designs/mug-4.webp',
@@ -83,7 +81,20 @@ export default function ProductPage() {
     '/images/mug-designs/mug-6.webp',
     '/images/mug-designs/mug-7.webp',
     '/images/mug-designs/mug-8.webp',
+    '/images/mug-designs/mug-9.webp',
+    '/images/mug-designs/unnamed (1).webp',
+    '/images/mug-designs/unnamed (4).webp',
   ];
+
+  const tshirtGallery = [
+    '/images/TShirt Design/2024-08-02 (1).webp',
+    '/images/TShirt Design/2024-08-02.webp',
+    '/images/TShirt Design/unnamed (2).webp',
+    '/images/TShirt Design/unnamed (3).webp',
+    '/images/TShirt Design/unnamed.webp',
+  ];
+
+  const activeGallery = product.category === 'mugs' ? mugGallery : (product.category === 't-shirts' ? tshirtGallery : null);
 
   const displayImage = selectedGalleryImage || (selectedMugType === 'Magic Mug with Colour Printing' 
     ? '/images/magic-mug-mockup.png' 
@@ -109,9 +120,9 @@ export default function ProductPage() {
               selectedSize={selectedSize}
             />
 
-            {product.category === 'mugs' && (
+            {activeGallery && (
               <div className={styles.gallery}>
-                {mugGallery.map((img, idx) => (
+                {activeGallery.map((img, idx) => (
                   <button 
                     key={idx} 
                     className={`${styles.galleryThumb} ${displayImage === img ? styles.activeThumb : ''}`}
